@@ -5,13 +5,13 @@
     border: 0;
 }
 body{
-    background-color: #000000;
+    background-color: #0E0D0F;
 }
 
 /* Main page banner and navigation css styles*/
 
 .top-banner{
-    background: #0C090A;
+    background: #0E0D0F;
     height: 100px;
     display: grid;
     grid-template-columns: .25fr 1fr;
@@ -49,10 +49,22 @@ Beginning of main page section styles*/
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     text-decoration: none;
-    background: #0C090A;
-    /*border: 1px solid #d72323;*/
+    background: #2E2B30;
     border-radius: 12px;
 }
+
+.title-name{
+    font-size: 18px;
+    /*margin-top: 36px;*/
+    color: darkgrey;
+    display: inline-block;
+    pointer-events: none;
+    justify-self: start;
+    align-self: center;
+    text-decoration: none;
+    padding-left: 25%;
+}
+
 
 .legend{
     font-family: 'Righteous', cursive;

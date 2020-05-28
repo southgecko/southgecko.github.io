@@ -7,6 +7,9 @@ fetch(eCoinUrl)
 .then(function(data){
     var stock = data;
     stock.forEach(item => {
+        if(item.current_price <= 1.0){
+            return;
+        }
         var a = document.createElement("a");
         var div = document.createElement('div')
         var currDiv = document.createElement('div')
@@ -15,7 +18,7 @@ fetch(eCoinUrl)
         var circulatingSupply = document.createElement("h2");
         var priceChange = document.createElement("h2");
         var img = document.createElement("img");
-        div.setAttribute('class', 'title');
+        div.setAttribute('class', 'title-name');
         img.setAttribute('src', item.image);
         img.setAttribute('class', 'image');
         a.setAttribute('id', item.id);
