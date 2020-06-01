@@ -26,8 +26,8 @@ fetch(eCoinUrl)
         a.setAttribute('href', 'currency.html?coin=' + item.id + '&name=' + item.name);
         a.setAttribute('target', '_blank');
         title.setAttribute('class', 'title');
-        currentPrice.setAttribute('class', 'title');
-        circulatingSupply.setAttribute('class', 'title');
+        currentPrice.setAttribute('class', 'current-price');
+        circulatingSupply.setAttribute('class', 'volume');
         priceChange.setAttribute("class", "priceChange");
         if(item.price_change_24h <= 0){
             currDiv.setAttribute('class', 'negative');
@@ -38,7 +38,7 @@ fetch(eCoinUrl)
         title.innerHTML = item.name;
         currentPrice.innerHTML = item.current_price;
         circulatingSupply.innerHTML = item.circulating_supply;
-        priceChange.innerHTML = item.price_change_24h + " / " + item.price_change_percentage_24h + "%";
+        priceChange.innerHTML = item.price_change_24h.toFixed(2) + " / " + item.price_change_percentage_24h.toFixed(2) + "%";
         currDiv.appendChild(priceChange);
         div.appendChild(img);
         div.appendChild(title);

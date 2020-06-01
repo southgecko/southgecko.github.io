@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     border: 0;
+    font-size: 16px;
 }
 body{
     background-color: #0E0D0F;
@@ -13,30 +14,34 @@ body{
 .top-banner{
     background: #0E0D0F;
     height: 100px;
+    width: 100%;
     display: grid;
-    grid-template-columns: .25fr 1fr;
+    grid-template-rows: 1fr 1fr;
 }
-
-nav{
-    justify-self: end;
-    align-self: center;
-    border-bottom: 4px solid white;
-}
-
-nav a{
-    font-family: 'Righteous', cursive;
-    text-decoration: none;
-    color: white;
-    font-size: 24px;
-    margin: 30px;
-}
-
 
 .top-banner h1{
+    font-size: 2.5rem;
     color: white;
     align-self: center;
     justify-self: center;
 }
+
+nav{
+    border-bottom: 4px solid white;
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+nav a{
+    display: inline-block;
+    font-family: 'Righteous', cursive;
+    text-decoration: none;
+    color: white;
+    font-size: 1.15rem;
+    padding: 3.75% 2%;
+}
+
 
 /*End of main page banner and navigation styles
 Beginning of main page section styles*/
@@ -44,25 +49,42 @@ Beginning of main page section styles*/
 
 .eCoinDisplay{
     width: 100%;
-    height: 75px;
+    height: 60px;
     margin-top: 8px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-areas: 
+    'title change'
+    'price change'
+    ;
+    grid-template-columns: 1fr 1fr;
+    /*grid-template-columns: repeat(4, 1fr);*/
     text-decoration: none;
     background: #2E2B30;
     border-radius: 12px;
 }
 
 .title-name{
+    width: 100%;
     font-size: 18px;
+    grid-area: title;
+    color: darkgrey;
+    display: flex;
+    pointer-events: none;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.current-price{
+    font-size: 1rem;
+    grid-area: price;
     /*margin-top: 36px;*/
     color: darkgrey;
     display: inline-block;
     pointer-events: none;
-    justify-self: start;
+    justify-self: center;
     align-self: center;
     text-decoration: none;
-    padding-left: 25%;
+    /*padding-left: 25%;*/
 }
 
 
@@ -70,9 +92,8 @@ Beginning of main page section styles*/
     font-family: 'Righteous', cursive;
     width: 100%;
     height: 75px;
-    margin-top: 0px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 }
 
 .title{
@@ -86,9 +107,20 @@ Beginning of main page section styles*/
     text-decoration: none;
 }
 
-.priceChange{
+.volume{
+    /*grid-area: volume;*/
     font-size: 18px;
     /*margin-top: 36px;*/
+    color: darkgrey;
+    display: none;
+    pointer-events: none;
+    justify-self: center;
+    align-self: center;
+    text-decoration: none;
+}
+
+.priceChange{
+    font-size: 18px;
     color: black;
     display: inline-block;
     pointer-events: none;
@@ -101,10 +133,11 @@ Beginning of main page section styles*/
     width: 18px;
     justify-self: center;
     align-self: center;
-    padding-right: 24px;
+    padding-top: 10px;
 }
 
 .negative{
+    grid-area: change;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,6 +149,7 @@ Beginning of main page section styles*/
 }
 
 .positive{
+    grid-area: change;
     display: flex;
     justify-content: center;
     align-items: center;
