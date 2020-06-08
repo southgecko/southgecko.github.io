@@ -23,7 +23,7 @@ fetch(eCoinUrl)
         img.setAttribute('class', 'image');
         a.setAttribute('id', item.id);
         a.setAttribute('class', 'eCoinDisplay');
-        a.setAttribute('href', 'currency.html?coin=' + item.id + '&name=' + item.name);
+        a.setAttribute('href', 'currency?coin=' + item.id + '&name=' + item.name);
         a.setAttribute('target', '_blank');
         title.setAttribute('class', 'title');
         currentPrice.setAttribute('class', 'current-price');
