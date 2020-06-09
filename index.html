@@ -9,24 +9,41 @@
         <link href="https://fonts.googleapis.com/css?family=Righteous&display=swap" rel="stylesheet">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js" integrity="sha256-arMsf+3JJK2LoTGqxfnuJPFTU4hAK57MtIPdFpiHXOU=" crossorigin="anonymous" defer></script>
         <script src="test.js" defer></script>
+        <script src="health.js" defer></script>
     </head>
     <body>
         <div class="top-banner">
-                <!--<img class="logo" src="CrytpoLogo.png" alt="company logo">-->
-                <h1>EcoinTracker</h1>
+            <h1>EcoinTracker</h1>
             <nav>
-                <a href="marketHealth" target="_blank">Market Health</a>
-                <a>Trending</a>
-                <a>Search</a>
+                <a href="#coinList">Coin List</a>
+                <a href="#marketHealth">Market Health</a>
+                <a href="#trending">Trending</a>
             </nav>
         </div>
-        <div class="stock-graphs" id="stockGraph">
-            <div class="legend">
-                <h2 class="title">Currency</h2>
-                <!--<h2 class="title">Current Price</h2>-->
-                <!--<h2 class="title">Volume</h2>-->
-                <h2 class="title">Change in 24h $/%</h2>
-            </div>
-        </div>
+        <main>
+            <article id="coinList">
+                <div class="stock-graphs" id="stockGraph">
+                    <div class="legend">
+                        <h2 class="title">Currency</h2>
+                        <h2 class="title">Change in 24h $/%</h2>
+                    </div>
+                </div>
+            </article>
+            <article id="marketHealth">
+                <section class="marketHealth">
+                    <div class="legendHealth" id="health-main">
+                        <h2>Active Currencies:</h2>
+                        <h2>Upcoming ICOS:</h2>
+                        <h2>Ongoing ICOS:</h2>
+                        <h2>Ended ICOS:</h2>
+                        <h2>Markets:</h2>
+                    </div>
+                    <div class="pie-canvas">
+                        <canvas id="pie-chart"></canvas>
+                    </div>
+                </section>
+            </article>
+            <article id="trending"></article>
+        </main>
     </body>
 </html>
