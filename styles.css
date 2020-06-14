@@ -5,15 +5,12 @@
     border: 0;
     font-size: 16px;
 }
+
+
 body{
     background-color: #0E0D0F;
 }
 
-html,body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-  }
 /* Main page banner and navigation css styles*/
 
 main {
@@ -24,8 +21,7 @@ main {
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    position: relative;
-    top: 100px;
+    margin-top: 100px;
 }
 
 main > article {
@@ -33,6 +29,10 @@ main > article {
     height: 100%;
   }
 
+article{
+    height: 100%;
+    overflow-y: auto;
+}
 
 .top-banner{
     background: #0E0D0F;
