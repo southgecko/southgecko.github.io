@@ -23,8 +23,8 @@ fetch(eCoinUrl)
         img.setAttribute('class', 'image');
         a.setAttribute('id', item.id);
         a.setAttribute('class', 'eCoinDisplay');
-        a.setAttribute('href', 'currency?coin=' + item.id + '&name=' + item.name);
-        a.setAttribute('target', '_blank');
+        a.setAttribute('href', '#trending') //+ '?coin=' + item.id + '&name=' + item.name);
+        a.setAttribute('onclick', 'trendingGraph(' + item.id + ')');
         title.setAttribute('class', 'title');
         currentPrice.setAttribute('class', 'current-price');
         circulatingSupply.setAttribute('class', 'volume');
@@ -51,16 +51,5 @@ fetch(eCoinUrl)
     });
 })
 
-/*
-function offsetAnchor() {
-    if(location.hash.length !== 0) {
-        window.scrollTo(window.scrollX, window.scrollY - 100);
-    }
-}
-
-window.addEventListener("hashchange", offsetAnchor);
-
-window.setTimeout(offsetAnchor, 1);
-*/
 
 
