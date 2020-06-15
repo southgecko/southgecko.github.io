@@ -6,32 +6,45 @@
     font-size: 16px;
 }
 
+html,body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+  }
 
 body{
     background-color: #0E0D0F;
+    display: grid;
+    grid-template-columns: minmax(min-content, 1024px);
+    justify-content: center;
+    grid-template-rows: min-content 1fr;
+    background-attachment: fixed;
+    background-size: 100vw 100vh;
 }
 
 /* Main page banner and navigation css styles*/
 
 main {
     display: grid;
-    grid-template-rows: 1fr;
     grid-auto-flow: column;
     grid-auto-columns: 100%;
+    grid-template-rows: 1fr;
+
+    /* This element will overflow scroll and scroll-snap */
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    margin-top: 100px;
+
 }
 
 main > article {
     scroll-snap-align: start;
-    height: 100%;
   }
 
 article{
     height: 100%;
-    overflow-y: auto;
+    overflow-y: scroll;
+    display: block;
 }
 
 .top-banner{
@@ -41,7 +54,6 @@ article{
     top: 0;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    position: fixed;
     z-index: 1;
 }
 
