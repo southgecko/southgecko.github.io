@@ -49,7 +49,7 @@ function trendingGraph(idName, mainName){
                     text: mainName
                 },
                 legend:{
-                    display: false,
+                    display: false
                 },
                 scales: {
                     xAxes: [{
