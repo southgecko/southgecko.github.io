@@ -1,6 +1,7 @@
 //hello
 var eCoinUrl = "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=100&page=1&sparkline=false";
 var parent = document.getElementById("stockGraph");
+var strEl = "'";
 
 fetch(eCoinUrl)
 .then((resp) => resp.json())
@@ -24,7 +25,7 @@ fetch(eCoinUrl)
         a.setAttribute('id', item.id);
         a.setAttribute('class', 'eCoinDisplay');
         a.setAttribute('href', '#trending') //+ '?coin=' + item.id + '&name=' + item.name);
-        a.setAttribute('onclick', 'trendingGraph(' + item.id + ')');
+        a.setAttribute('onclick', 'trendingGraph('+ strEl + item.id + strEl + ',' + strEl + item.name + strEl +')');
         title.setAttribute('class', 'title');
         currentPrice.setAttribute('class', 'current-price');
         circulatingSupply.setAttribute('class', 'volume');

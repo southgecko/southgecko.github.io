@@ -1,11 +1,12 @@
 
-function trendingGraph(idName){
+function trendingGraph(idName, mainName){
     /*var url = window.location.search
     let params = new URLSearchParams(url);
     console.log(url);
     var id = params.get('coin');
     var eCoinName = params.get('name');*/
-    var id = idName.id;
+    var id = idName;
+    console.log(mainName);
     console.log(id);
     var api = "https://api.coingecko.com/api/v3/coins/" + id + "/market_chart?vs_currency=usd&days=100";
     fetch(api)
@@ -44,7 +45,8 @@ function trendingGraph(idName){
             },
             options: {
                 title: {
-                    display: false
+                    display: true,
+                    text: mainName
                 },
                 legend:{
                     display: false,
