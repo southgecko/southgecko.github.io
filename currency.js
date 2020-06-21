@@ -80,3 +80,5 @@ function trendingGraph(idName, mainName){
         })
     })
 }
+
+trendingGraph('bitcoin', 'Bitcoin');
